@@ -1,0 +1,86 @@
+{
+    "data": [
+        {
+            "name": "correct data",
+            "input": {
+                "ad_network": "FOO",
+                "date": "2019-06-05",
+                "app_name": "LINETV",
+                "unit_id": "55665201314",
+                "request": "100", 
+                "revenue": "0.00365325", 
+                "imp": "1"
+            },
+            "output": true
+        },
+        {
+            "name": "incorrect key",
+            "input": {
+                "ad_network": "FOO",
+                "data": "2019-06-05",
+                "app_name": "LINETV",
+                "unit_id": "55665201314",
+                "request": "100", 
+                "revenue": "0.00365325"
+            },
+            "output": false
+        },
+        {
+            "name": "lack of key",
+            "input": {
+                "ad_network": "FOO",
+                "date": "2019-06-05",
+                "app_name": "LINETV",
+                "unit_id": "55665201314",
+                "request": "100", 
+                "revenue": "0.00365325"
+            },
+            "output": false
+        },
+        {
+            "name": "empty data",
+            "input": {
+            },
+            "output": false
+        },
+        {
+            "name": "invalid type",
+            "input": {
+                "ad_network": "FOO",
+                "date": "2019-06-05",
+                "app_name": "LINETV",
+                "unit_id": "55665201314",
+                "request": "100", 
+                "revenue": "0.00365325",
+                "imp": 123
+            },
+            "output": false
+        },
+        {
+            "name": "invalid format of value",
+            "input": {
+                "ad_network": "FOO",
+                "date": "2019/05/12",
+                "app_name": "LINETV",
+                "unit_id": "55665201314A",
+                "request": "100", 
+                "revenue": "0.00365325",
+                "imp": "123"
+            },
+            "output": false
+        },
+        {
+            "name": "null value",
+            "input": {
+                "ad_network": "FOO",
+                "date": "2019/05/12",
+                "app_name": "LINETV",
+                "unit_id": "55665201314A",
+                "request": "100", 
+                "revenue": "0.00365325",
+                "imp": null
+            },
+            "output": false
+        }
+    ]
+}
