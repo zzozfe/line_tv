@@ -1,7 +1,7 @@
 import re
 import json
 
-# 驗證key有沒有缺
+# 驗證key有沒有缺1
 def is_valid(data):
     # check type of data
     if not isinstance(data, dict):
